@@ -1,0 +1,387 @@
+
+#root {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #111111;
+}
+
+#app {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 80%;
+}
+
+header {
+  display: flex;
+  margin-bottom: 0;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  justify-content: flex-start;
+  background: #ffffff;
+  height: 9vh;
+}
+
+header p {
+  margin: 0;
+  padding: 14px;
+  color: #111111;
+  background-color: #ff9100;
+  border-right: 4px solid black;
+  font-size: 3vi;
+  font-weight: bolder;
+  width: 22vw;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background-color: #ffd9a8;
+  height: 87vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  width: 100%;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  height: 3vh;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+#loginbtn {
+  position: fixed;
+  left: 50%;
+  top: 13vh;
+  transform: translate(-50%, -50%);
+}
+
+#getprofilebtn {
+  position: fixed;
+  left: 80%;
+  top: 4.5vh;
+  transform: translate(-50%, -50%);
+}
+
+#getartistsbtn {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 25%;
+  top: 13vh;
+  transform: translate(-50%, -50%);
+}
+
+#gettracksbtn {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 13vh;
+  transform: translate(-50%, -50%);
+}
+
+#getgenresbtn {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 75%;
+  top: 13vh;
+  transform: translate(-50%, -50%);
+}
+
+#timerangeartists, #timerangetracks, #timerangegenres {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  top: 20vh;
+  left: 50%;
+}
+
+#charttracks, #chartartists {
+  float: left;
+  position: relative;
+  height: 30vh;
+  width: 50vw;
+  top: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background-color: #111111;
+  color: #ffffff;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#charttracks .covertop, #chartartists .covertop {
+  position: relative;
+  left: 50%;
+  top: -11vh;
+  transform: translate(-50%, 0%);
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ffffff;
+  float: left;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+#chartgenres {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  float: left;
+  height: 30vh;
+  width: 50vw;
+  top: 20vh;
+  justify-content: space-evenly;
+  background-color: #111111;
+  color: #ffffff;
+  padding-bottom: 5vh;
+  padding-top: 4vh;
+}
+
+#chartgenres .genretop {
+  position: relative;
+  width: 25vw;
+  height: 2vh;
+  top: 1vh;
+  color: #ffffff;
+}
+
+#charttracks .titlechart, #chartartists .titlechart, #chartgenres .titlechart {
+  position: fixed;
+  left: 50%;
+  top: 31vh;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  width: 50vw;
+}
+
+#charttracks .count, #chartartists .count {
+  position: fixed;
+  float: left;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  top: 56vh;
+  transform: translate(15%, 0%);
+  color: #ffffff;
+}
+
+#chart0, #chart1, #chart2, #chart3, #chart4 {
+  position: relative;
+  width: 1.5vi;
+  border-width: 3px;
+  border-style: solid;
+  background-color: #ff9100;
+  border-color: #ffffff;
+  bottom: 10px;
+}
+
+#chart0 {
+  height: 50%;
+}
+
+#chart1 {
+  height: 40%;
+}
+
+#chart2 {
+  height: 30%;
+}
+
+#chart3 {
+  height: 20%;
+}
+
+#chart4 {
+  height: 10%;
+}
+
+.coverbottom {
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 20px;
+}
+
+.covertop img {
+  width: 5vi;
+  height: 5vi;
+}
+
+.coverbottom img {
+  width: 8vi;
+  height: 8vi;
+  margin: 10px;
+}
+
+#resultsartists, #resultstracks {
+  float: left;
+  position: relative;
+  width: 100%;
+  top: 26vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 30vh;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+#resultsprofile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 20%;
+  top: 20vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
+#resultsprofile p {
+  margin-bottom: 16px !important;
+}
+
+#elements {
+  height: 30vh;
+  width: 18%;
+  border-width: 4px;
+  border-style: solid;
+  background-color: #ffffff;
+  color: #111111;
+  border-color: #111111;
+}
+
+#elements a {
+  text-decoration: none;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  display: contents;
+}
+
+#elements a div:first-child {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  position: relative;
+}
+
+#elements:hover {
+  background-color: #ff9100;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profileimage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  --bs-btn-line-height: 3vh !important;
+  --bs-btn-border-radius: 0px !important;
+  --bs-btn-border-width: 5px !important;
+
+  --bs-btn-bg: #ffffff !important;
+  --bs-btn-color: #111111 !important;
+  --bs-btn-border-color: #111111 !important;
+
+  --bs-btn-hover-bg: #ff9100 !important;
+  --bs-btn-hover-color: #111111 !important;
+  --bs-btn-hover-border-color: #111111 !important;
+
+  --bs-btn-font-family: 'Cascadia Mono', sans-serif !important;
+  --bs-btn-font-size: 1vi !important;
+}
+
+p {
+  font-size: 1vi;
+  margin-bottom: 0px !important;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  padding-inline: 33%;
+  padding-block: 44px;
+  background-color: transparent;
+}
+
+@media (max-width: 920px) {
+
+  #chartartists, #charttracks {
+    width: 100%;
+  }
+
+  .covertop img {
+    width: 10vi;
+    height: 10vi;
+  }
+
+  #timerangeartists, #timerangetracks, #timerangegenres {
+    width: 80%;
+  }
+
+  #getartistsbtn {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 23%;
+    top: 13vh;
+    transform: translate(-50%, -50%);
+    width: 26%;
+  }
+  
+  #gettracksbtn {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 13vh;
+    transform: translate(-50%, -50%);
+    width: 26%;
+  }
+  
+  #getgenresbtn {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 77%;
+    top: 13vh;
+    transform: translate(-50%, -50%);
+    width: 26%;
+  }
+}
